@@ -223,10 +223,6 @@ header .logo {
     margin-right: 10px;
 }
 
-.social-list-icon {
-    fill: var(--icons-fill-light-background);
-}
-
 .social-list-link {
     display: flex;
     align-items: center;
@@ -241,6 +237,12 @@ header .logo {
 .social-list-link:hover, 
 .social-list-link:focus {
     background-color: var(--accent-color);
+}
+
+.social-list-icon {
+    fill: var(--icons-fill-light-background);
+
+    transition: fill var(--transition-animation);
 }
 
 .social-list-link:hover .social-list-icon,
@@ -391,7 +393,7 @@ header .logo {
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-    transition: background-color var(--transition-animation);
+    transition: background-color var(--transition-animation), box-shadow var(--transition-animation);
 }
 
 .order-service-button:hover,
@@ -591,16 +593,18 @@ header .logo {
     line-height: 1.62;
     text-align: center;
     letter-spacing: 0.03em;
-    background: var(--button-background-color);
+    background-color: var(--button-background-color);
     border-color: var(--button-background-color);
     border-radius: 4px;
     border-style: none;
     color: var(--button-text-color);
+
+    transition: background-color var(--transition-animation), color var(--transition-animation), box-shadow var(--transition-animation);
 }
 
 .proj-filter-button:hover, 
 .proj-filter-button:focus {
-    background: var(--accent-color);
+    background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     color: var(--button-text-hover-color);
 }
@@ -632,6 +636,8 @@ header .logo {
 
 .proj-link {
     display: block;
+
+    transition: box-shadow var(--transition-animation);
 }
 
 .proj-link:hover,
