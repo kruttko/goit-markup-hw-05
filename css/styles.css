@@ -454,6 +454,31 @@ header .logo {
     margin-right: 30px;
 }
 
+.work-list-item {
+    position: relative;
+}
+
+.work-item-text {
+    position: absolute;
+
+    bottom: 0;
+    background-color: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+
+.work-text {
+    display: flex;
+    justify-content: center;
+
+    color: var(--primary-text-color-theme-dark);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
 /* team section */
 .team-section {
     background-color: var(--light-background-section-color);
