@@ -28,6 +28,7 @@
     --icons-dark-background: rgba(255, 255, 255, 0.1);
     --icons-fill-dark-background: #FFFFFF;
 
+    --transition-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 body {
@@ -131,6 +132,8 @@ header .logo {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color-theme-light);
+
+    transition: color var(--transition-animation);
 }
 
 .header-email-link:hover,
@@ -141,7 +144,23 @@ header .logo {
 }
 
 .nav-list-link.current {
+    position: relative; 
+
     color: var(--accent-color);
+}
+
+.nav-list-link.current::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
 }
 
 /* features section */
@@ -215,6 +234,8 @@ header .logo {
     width: 44px;
     height: 44px;
     border-radius: 50%;
+
+    transition: background-color var(--transition-animation);
 }
 
 .social-list-link:hover, 
@@ -233,6 +254,10 @@ header .logo {
     justify-content: center;
 }
 
+.clients-list-item:not(:last-child) {
+    margin-right: 30px;
+}
+
 .clients-link {
     display: flex;
     align-items: center;
@@ -242,19 +267,19 @@ header .logo {
 
     border: 1px solid var(--icons-fill-light-background);
     border-radius: 4px;
-}
 
-.clients-list-item:not(:last-child) {
-    margin-right: 30px;
-}
-
-.clients-icon {
-    fill: var(--icons-fill-light-background);
+    transition: border-color var(--transition-animation);
 }
 
 .clients-link:hover,
 .clients-link:focus {
     border-color: var(--accent-color);
+}
+
+.clients-icon {
+    fill: var(--icons-fill-light-background);
+
+    transition: fill var(--transition-animation);
 }
 
 .clients-link:hover .clients-icon,
@@ -276,6 +301,8 @@ header .logo {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color-theme-light);
+
+    transition: color var(--transition-animation);
 }
 
 .nav-list-link:hover, 
@@ -360,14 +387,16 @@ header .logo {
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--button-text-hover-color);
-    background: var(--accent-color);
+    background-color: var(--accent-color);
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition: background-color var(--transition-animation);
 }
 
 .order-service-button:hover,
 .order-service-button:focus {
-    background: var(--blue-button-hover-color);
+    background-color: var(--blue-button-hover-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -449,6 +478,8 @@ header .logo {
 
 .footer-email-link {
     color: var(--secondary-text-color-theme-dark);
+    
+    transition: color var(--transition-animation);
 }
 
 .footer-email-link:hover,
@@ -458,6 +489,8 @@ header .logo {
 
 .footer-phone-link {
     color: var(--secondary-text-color-theme-dark);
+
+    transition: color var(--transition-animation);
 }
 
 .footer-phone-link:hover,
@@ -500,6 +533,8 @@ header .logo {
     height: 44px;
     border-radius: 50%;
     background-color: var(--icons-dark-background);
+
+    transition: background-color var(--transition-animation);
 }
 
 .footer-socials-link:hover,
