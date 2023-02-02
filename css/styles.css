@@ -717,13 +717,13 @@ header .logo {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.proj-thumb {
+.proj-card {
     position: relative;
 
     overflow: hidden;
 }
 
-.proj-thumb::before {
+.proj-card::before {
     content: '';
 
     position: absolute;
@@ -739,7 +739,7 @@ header .logo {
     transition: transform var(--transition-animation);
 }
 
-.proj-link:hover .proj-thumb::before {
+.proj-link:hover .proj-card::before {
     transform: translateY(0);
 }
 
@@ -765,7 +765,7 @@ header .logo {
     transform: translateY(0%);
 }
 
-.proj-card {
+.proj-card-bottom {
     padding: 20px 24px 20px 24px;
     border-right: 1px solid var(--card-border-color);
     border-left: 1px solid var(--card-border-color);
