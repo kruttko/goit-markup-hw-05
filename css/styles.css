@@ -412,7 +412,7 @@ header .logo {
 
     background-color: rgba(0, 0, 0, 0.2);
 
-    transition: background-color var(--transition-animation), opacity var(--transition-animation);
+    transition: background-color var(--transition-animation);
 }
 
 .modal-backdrop.is-hidden {
@@ -729,18 +729,18 @@ header .logo {
     position: absolute;
     bottom: 0;
     right: 0;
-    display: inline-block;
     width: 100%;
     height: 100%;
-
     transform: translateY(100%);
-    transition: transform var(--transition-animation);
 
+    display: inline-block;
     background-color: var(--hover-overlay);
+
+    transition: transform var(--transition-animation);
 }
 
 .proj-link:hover .proj-thumb::before {
-    transform: translateY(0%);
+    transform: translateY(0);
 }
 
 .proj-overlay {
@@ -749,6 +749,8 @@ header .logo {
     right: 0;
     width: 100%;
     height: 100%;
+    transform: translateY(100%);
+
     padding: 63px 24px;
 
     font-size: 18px;
@@ -756,7 +758,6 @@ header .logo {
     letter-spacing: 0.03em;
     color: var(--primary-text-color-theme-dark);
 
-    transform: translateY(100%);
     transition: transform var(--transition-animation);
 }
 
