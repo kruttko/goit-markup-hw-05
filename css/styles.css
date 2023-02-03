@@ -411,8 +411,9 @@ header .logo {
     height: 100%;
 
     background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
 
-    transition: background-color var(--transition-animation);
+    transition: opacity var(--transition-animation), background-color var(--transition-animation);
 }
 
 .modal-backdrop.is-hidden {
@@ -425,7 +426,7 @@ header .logo {
     top: 50%;
     left: 50%;
 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.9);
     min-width: 528px;
     min-height: 581px;
 
@@ -433,7 +434,11 @@ header .logo {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    transition: transform var(--transition-animation), opacity var(--transition-animation);
+    transition: transform var(--transition-animation);
+}
+
+.modal-backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .btn-close {
